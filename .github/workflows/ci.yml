@@ -33,4 +33,4 @@ jobs:
           chmod -R 777 writable
 
       - name: Run PHPUnit tests
-        run: ./vendor/bin/phpunit
+        run: ./vendor/bin/phpunit --no-coverage
