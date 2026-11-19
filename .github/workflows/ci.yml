@@ -29,6 +29,8 @@ jobs:
           if [ -f .env.example ]; then
             cp .env.example .env
           fi
+          mkdir -p writable/cache writable/logs writable/session writable/debugbar writable/uploads
+          chmod -R 777 writable
 
       - name: Run PHPUnit tests
         run: ./vendor/bin/phpunit
